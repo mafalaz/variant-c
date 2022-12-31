@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'variant-c'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0542B69B2BB243689936AACC34A7800F }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_70E2D580C19248FEB4808B6D148E86EC }}
