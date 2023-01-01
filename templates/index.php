@@ -1,3 +1,6 @@
+<?php
+    require('variant.php');
+?>
 {% extends 'headerPage.html' %}
 {% load static %}
 {% block content%}
@@ -5,10 +8,9 @@
  <section id="appointment" class="appointment section-bg">
       <div class="container">
          <div class="section-title" id="myform">
-          <h2>Please Enter Details</h2>
-          <p>You're about to use a safe and anonymous COVID-19 predictor based on the symptoms and some information that applies to your current feeling and situation.
-              Your answers will be carefully analyzed using a machine learning algorithm. To start, kindly click the
-              following choices after that, click the predict button.
+          <h2>Silahkan pilih gejala dan peristiwa yang Anda alami saat ini</h2>
+          <p>Anda akan menggunakan alat prediksi COVID-19 yang aman dan anonim berdasarkan gejala dan beberapa informasi yang sesuai dengan perasaan dan situasi Anda saat ini. 
+            Jawaban Anda akan dianalisis dengan cermat menggunakan Algoritma Machine Learning. Untuk memulai, silakan klik pilihan berikut setelah itu, klik tombol prediksi.
           </p>
         </div>
          {% if covidval %}
@@ -30,7 +32,7 @@
 </style>
 <div class="text-center">
      <div class="form-row">
-         <div class="col-md form-group">Breathing Problem
+         <div class="col-md form-group">Masalah Pernapasan
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="BreathingProblemID" value="bp">
                 <label class="custom-control-label shadow-sm" for="BreathingProblemID">
@@ -38,7 +40,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Fever
+        <div class="col-md form-group">Demam
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="FeverID" value="fever">
                 <label class="custom-control-label shadow-sm" for="FeverID">
@@ -46,7 +48,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Dry Cough
+        <div class="col-md form-group">Batuk Kering
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="DryCoughID" value="drycough">
                 <label class="custom-control-label shadow-sm" for="DryCoughID">
@@ -54,7 +56,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Sore Throat
+        <div class="col-md form-group">Sakit Tenggorokan
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="SorethroatID" value="sorethroat">
                 <label class="custom-control-label shadow-sm" for="SorethroatID">
@@ -66,7 +68,7 @@
 
 
      <div class="form-row">
-         <div class="col-md form-group">Runny Nose
+         <div class="col-md form-group">Pilek
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="RunningNoseID" value="runningnose">
                 <label class="custom-control-label shadow-sm" for="RunningNoseID">
@@ -74,7 +76,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Asthma
+        <div class="col-md form-group">Asma
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="AsthmaID" value="asthma">
                 <label class="custom-control-label shadow-sm" for="AsthmaID">
@@ -82,7 +84,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Headache
+        <div class="col-md form-group">Sakit Kepala
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="HeadacheID" value="headache">
                 <label class="custom-control-label shadow-sm" for="HeadacheID">
@@ -90,7 +92,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Heart Disease
+        <div class="col-md form-group">Penyakit Jantung
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="HeartDiseaseID" value="heartdisease">
                 <label class="custom-control-label shadow-sm" for="HeartDiseaseID">
@@ -109,7 +111,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Hypertension
+        <div class="col-md form-group">Hipertensi
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="HypertensionID" value="hypertension">
                 <label class="custom-control-label shadow-sm" for="HypertensionID">
@@ -117,7 +119,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Fatigue
+        <div class="col-md form-group">Kelelahan
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="FatigueID" value="fatigue">
                 <label class="custom-control-label shadow-sm" for="FatigueID">
@@ -125,7 +127,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Abroad Travel
+        <div class="col-md form-group">Wisata Luar Negeri
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="AbroadTravelID" value="abroad">
                 <label class="custom-control-label shadow-sm" for="AbroadTravelID">
@@ -136,7 +138,7 @@
      </div>
 
      <div class="form-row">
-         <div class="col-md form-group">Contact to Covid Patient
+         <div class="col-md form-group">Kontak ke Pasien Covid
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="ContactCovidPatientID" value="contact">
                 <label class="custom-control-label shadow-sm" for="ContactCovidPatientID">
@@ -144,7 +146,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Attended Large Gathering
+        <div class="col-md form-group">Menghadiri Gathering Besar
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="AttendedLargeGatheringID" value="attended">
                 <label class="custom-control-label shadow-sm" for="AttendedLargeGatheringID">
@@ -152,7 +154,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Visited Public Areas
+        <div class="col-md form-group">Mengunjungi Area Publik
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="VisitedPublicID" value="visited">
                 <label class="custom-control-label shadow-sm" for="VisitedPublicID">
@@ -160,7 +162,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-md form-group">Family Working in Public
+        <div class="col-md form-group">Keluarga Bekerja di Tempat Umum
              <div class="custom-control custom-checkbox image-checkbox">
                 <input type="checkbox" class="custom-control-input" name="checks" id="FamilyWorkingPublicID" value="fam">
                 <label class="custom-control-label shadow-sm" for="FamilyWorkingPublicID">
@@ -176,21 +178,22 @@
             {%  if covidval == "positive"  %}
             <div class="alert alert-danger" id="prediction_result">
                 <h1 class="bx bxs-error"></h1>
-                <h4>It seems like you need help and potentially  </h4>
-                <h2><u><b> COVID-19 Positive.</b> </u></h2>
-                <p>For your safety, please call your medical provider immediately.</p>
-                <p>To obtain an official PCR test certification, we'd suggest to please follow the usual process and undergo PCR/Swab test.</p>
+                <h4>Sepertinya Anda membutuhkan bantuan dan berpotensi</h4>
+                <h2><u><b>Positif Covid-19 Varian <?php echo $a[$random_keys[0]]."<br>";?> </b></u></h2>
+                <p>Demi keselamatan Anda, segera hubungi pelayanan medis Anda.</p>
+                <p>Untuk mendapatkan sertifikasi tes PCR resmi, kami sarankan untuk mengikuti proses seperti biasa dan menjalani tes PCR/Swab.</p>
             </div>
+            
             {%  else  %}
             <div class="alert alert-info" id="prediction_result">
                 <h1 class="bx bxs-info-circle"></h1>
-                <h4>You seem fine and </h4>
-                <h2><u><b> COVID-19 Negative.</b> </u></h2>
-                <p>Still kindly observe safety precautions against the virus and be aware of the <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="more-btn">WHO's Advice to the Public.</a></p>
-                <p>To obtain an official PCR test certification, we'd suggest to please follow the usual process and undergo PCR/Swab test.</p>
+                <h4>Anda tampak baik-baik saja dan </h4>
+                <h2><u><b> Negatif Covid-19.</b> </u></h2>
+                <p>Tetap dengan ramah amati tindakan pencegahan keamanan terhadap virus dan waspadai <a target="_blank" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" class="more-btn">WHO's Advice to the Public.</a></p>
+                <p>Untuk mendapatkan sertifikasi tes PCR resmi, kami sarankan untuk mengikuti proses seperti biasa dan menjalani tes PCR/Swab.</p>
             </div>
             {% endif %}
-         <a href="/" class="navbar-brand">Predict Again?</a>
+         <a href="/" class="navbar-brand">Predict Lagi?</a>
          {% else%}
             <div class="php-email-form text-center" id="predict-button"><button type="submit">Predict</button></div>
          {% endif %}
