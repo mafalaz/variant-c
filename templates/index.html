@@ -1,6 +1,3 @@
-<?php
-    require('variant.php');
-?>
 {% extends 'headerPage.html' %}
 {% load static %}
 {% block content%}
@@ -179,7 +176,12 @@
             <div class="alert alert-danger" id="prediction_result">
                 <h1 class="bx bxs-error"></h1>
                 <h4>Sepertinya Anda membutuhkan bantuan dan berpotensi</h4>
-                <h2><u><b>Positif Covid-19 Varian <?php echo $a[$random_keys[0]]."<br>";?> </b></u></h2>
+                <h2><u><b>Positif Covid-19 Varian <p id="variant"></p></b></u></h2>
+                <script>
+                    let variant = ["Omicron", "Alpha", "Beta", "Gamma", "Delta", "Lambda", "Kappa", "Eta", "Lota", "Mu"];
+                    let randomVariant = variant[Math.floor(Math.random()*variant.length)];
+                    document.getElementById("variant").innerHTML = randomVariant + ".";
+                </script>
                 <p>Demi keselamatan Anda, segera hubungi pelayanan medis Anda.</p>
                 <p>Untuk mendapatkan sertifikasi tes PCR resmi, kami sarankan untuk mengikuti proses seperti biasa dan menjalani tes PCR/Swab.</p>
             </div>
